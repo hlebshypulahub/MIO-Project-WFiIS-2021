@@ -1,0 +1,113 @@
+perc = 0.75;
+bound_perc = 0.2;
+it = 100;
+
+'SwarmSize', 20, 'MaxIterations', 1000*(size(paramVals, 2) - bound_out)/20, 'MaxStallIterations', 30
+
+Result:
+      Description        SC_u     PSO_u      SC_t     PSO_t
+    ________________    ______    ______    ______    _____
+
+    "Iteracja: 1"          111       111        35       35
+    "Iteracja: 2"          108       111        37       35
+    "Iteracja: 3"          110       110        35       36
+    "Iteracja: 4"          111       112        34       32
+    "Iteracja: 5"          110       111        37       37
+    "Iteracja: 6"          109       111        36       35
+    "Iteracja: 7"          109       111        36       35
+    "Iteracja: 8"          108       109        35       37
+    "Iteracja: 9"          110       111        35       36
+    "Iteracja: 10"         110       111        33       36
+    "Iteracja: 11"         110       112        34       35
+    "Iteracja: 12"         109       110        35       36
+    "Iteracja: 13"         111       112        34       34
+    "Iteracja: 14"         110       111        36       34
+    "Iteracja: 15"         110       111        34       35
+    "Iteracja: 16"         111       112        35       36
+    "Iteracja: 17"         111       111        35       36
+    "Iteracja: 18"         109       110        36       36
+    "Iteracja: 19"         109       111        36       37
+    "Iteracja: 20"         109       110        36       36
+    "Iteracja: 21"         110       112        34       36
+    "Iteracja: 22"         111       112        34       34
+    "Iteracja: 23"         110       111        35       34
+    "Iteracja: 24"         112       112        33       34
+    "Iteracja: 25"         108       110        37       35
+    "Iteracja: 26"         110       111        36       36
+    "Iteracja: 27"         109       108        35       35
+    "Iteracja: 28"         109       111        35       33
+    "Iteracja: 29"         109       110        36       37
+    "Iteracja: 30"         110       111        34       34
+    "Iteracja: 31"         110       108        35       32
+    "Iteracja: 32"         112       112        33       33
+    "Iteracja: 33"         109       110        36       37
+    "Iteracja: 34"         110       111        34       37
+    "Iteracja: 35"         111       109        35       36
+    "Iteracja: 36"         110       111        35       34
+    "Iteracja: 37"         110       100        36       32
+    "Iteracja: 38"         110       110        36       35
+    "Iteracja: 39"         110       110        36       35
+    "Iteracja: 40"         109       110        37       37
+    "Iteracja: 41"         109       110        36       36
+    "Iteracja: 42"         109       109        35       35
+    "Iteracja: 43"         112       110        34       33
+    "Iteracja: 44"         108       107        35       34
+    "Iteracja: 45"         111       109        36       34
+    "Iteracja: 46"         108       111        35       36
+    "Iteracja: 47"         108       110        37       36
+    "Iteracja: 48"         109       110        37       36
+    "Iteracja: 49"         110       111        36       36
+    "Iteracja: 50"         112       111        35       33
+    "Iteracja: 51"         110       112        35       35
+    "Iteracja: 52"         109       111        36       36
+    "Iteracja: 53"         108       111        36       36
+    "Iteracja: 54"         112       111        35       36
+    "Iteracja: 55"         111       110        37       36
+    "Iteracja: 56"         107       109        35       35
+    "Iteracja: 57"         110       111        35       35
+    "Iteracja: 58"         111       109        34       33
+    "Iteracja: 59"         110       112        35       34
+    "Iteracja: 60"         111       110        35       34
+    "Iteracja: 61"         109       111        37       36
+    "Iteracja: 62"         110       110        37       37
+    "Iteracja: 63"         109       110        36       37
+    "Iteracja: 64"         109       110        36       37
+    "Iteracja: 65"         111       111        34       34
+    "Iteracja: 66"         110       110        35       36
+    "Iteracja: 67"         112       110        34       34
+    "Iteracja: 68"         110       110        36       35
+    "Iteracja: 69"         109       111        36       36
+    "Iteracja: 70"         109       110        37       35
+    "Iteracja: 71"         111       112        32       35
+    "Iteracja: 72"         108       110        36       37
+    "Iteracja: 73"         110       111        36       36
+    "Iteracja: 74"         109       111        36       36
+    "Iteracja: 75"         110       110        36       34
+    "Iteracja: 76"         110       109        35       33
+    "Iteracja: 77"         110       111        37       36
+    "Iteracja: 78"         110       112        35       35
+    "Iteracja: 79"         111       111        35       35
+    "Iteracja: 80"         109       111        37       35
+    "Iteracja: 81"         110       111        34       36
+    "Iteracja: 82"         109       111        36       35
+    "Iteracja: 83"         108       111        36       36
+    "Iteracja: 84"         110       110        36       36
+    "Iteracja: 85"         110       111        35       36
+    "Iteracja: 86"         109       111        37       34
+    "Iteracja: 87"         111       112        34       33
+    "Iteracja: 88"         111       112        35       35
+    "Iteracja: 89"         108       110        36       35
+    "Iteracja: 90"         111       112        35       33
+    "Iteracja: 91"         109       111        35       35
+    "Iteracja: 92"         108       110        36       32
+    "Iteracja: 93"         112       112        34       34
+    "Iteracja: 94"         108       110        36       34
+    "Iteracja: 95"         109       110        37       36
+    "Iteracja: 96"         111       109        35       35
+    "Iteracja: 97"         110       110        35       35
+    "Iteracja: 98"         109       108        36       35
+    "Iteracja: 99"         109       111        36       36
+    "Iteracja: 100"        111       109        35       35
+    "Suma"               10978     11043      3537     3509
+    "Średnie"           109.78    110.43     35.37    35.09
+    "Odchylenie std"    1.1333     1.472    1.0604    1.272
