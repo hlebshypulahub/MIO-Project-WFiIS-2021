@@ -1,0 +1,57 @@
+SEEDS
+perc = 0.8;
+bound_perc = 0.2;
+it = 10;
+
+'SwarmSize', 20, 'MaxIterations', 1000*(size(paramVals, 2) - bound_out)/20, 'MaxStallIterations', 15
+
+
+Result:
+      Description       SC_u     PSO_u      SC_t     PSO_t 
+    ________________    _____    ______    ______    ______
+
+    "Iteracja: 1"         160       148        37        34
+    "Iteracja: 2"         157       136        39        28
+    "Iteracja: 3"         164       128        36        33
+    "Iteracja: 4"         159       109        34        22
+    "Iteracja: 5"         155       125        36        31
+    "Iteracja: 6"         153       117        36        33
+    "Iteracja: 7"         157       138        37        32
+    "Iteracja: 8"         160       141        35        32
+    "Iteracja: 9"         153       123        37        23
+    "Iteracja: 10"        150       117        38        29
+    "Suma"               1568      1282       365       297
+    "Średnie"           156.8     128.2      36.5      29.7
+    "Odchylenie std"    4.158    12.336    1.4337    4.2177
+	
+	
+
+
+
+
+IRIS
+perc = 0.8;
+bound_perc = 0.2;
+it = 10;
+
+'SwarmSize', 20, 'MaxIterations', 1000*(size(paramVals, 2) - bound_out)/20, 'MaxStallIterations', 15
+
+
+
+Result:
+      Description        SC_u      PSO_u      SC_t      PSO_t 
+    ________________    _______    ______    _______    ______
+
+    "Iteracja: 1"           116       116         29        30
+    "Iteracja: 2"           117       119         29        29
+    "Iteracja: 3"           118       118         27        29
+    "Iteracja: 4"           118       118         29        30
+    "Iteracja: 5"           117       119         29        29
+    "Iteracja: 6"           118       120         29        28
+    "Iteracja: 7"           118       116         28        28
+    "Iteracja: 8"           118       116         28        26
+    "Iteracja: 9"           119       116         29        27
+    "Iteracja: 10"          117       118         29        30
+    "Suma"                 1176      1176        286       286
+    "Średnie"             117.6     117.6       28.6      28.6
+    "Odchylenie std"    0.84327    1.5055    0.69921    1.3499
