@@ -1,1 +1,0 @@
-dataset = readmatrix('seeds.csv')
