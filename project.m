@@ -4,10 +4,11 @@ clc;
 close all;
 
 
+
 %%--%%--%% Zmienne pomocnicze
 perc = 0.8;
 bound_perc = 0.2;
-it = 1;
+it = 2;
 
 Description = strings(it, 1);
 SC_u = zeros(it, 1);
@@ -54,7 +55,7 @@ for loop = 1:it
 
 
     fprintf('Iteracja: %d\n', loop);
-    Description(loop) = convertCharsToStrings(sprintf('Iteracja: %d', loop));
+    Description(loop) = convertCharsToStrings(sprintf('Iteracja: %d (%%)', loop));
 
     %%--%%--%% Inicjalizacja FIS
     optionsSC = genfisOptions('SubtractiveClustering');
@@ -76,8 +77,8 @@ for loop = 1:it
     end
     temp = y_temp - getGlobal_y_u;
     q = find(temp == 0);
-    fprintf('Liczba dobrze zkwalifikowanych przypadków (SubtractiveClustering FIS) - set uczący: %d\n', size(q, 1));
-    SC_u(loop) = size(q, 1);
+    fprintf('Procent dobrze zkwalifikowanych przypadków (SubtractiveClustering FIS) - set uczący: %.3f%%\n', round(size(q, 1) / size(y_out, 1), 5) * 100);
+    SC_u(loop) = round(size(q, 1) / size(y_out, 1), 5) * 100;
 
 
     %%--%%--%% WYpisywanie liczby dobrze zkwalifikowanych przypadków
@@ -88,8 +89,8 @@ for loop = 1:it
     end
     temp = y_temp - getGlobal_y_t;
     q = find(temp == 0);
-    fprintf('Liczba dobrze zkwalifikowanych przypadków (SubtractiveClustering FIS) - set testujący: %d\n', size(q, 1));
-    SC_t(loop) = size(q, 1);
+    fprintf('Procent dobrze zkwalifikowanych przypadków (SubtractiveClustering FIS) - set testujący: %.3f%%\n', round(size(q, 1) / size(y_test, 1), 5) * 100);
+    SC_t(loop) = round(size(q, 1) / size(y_test, 1), 5) * 100;
 
 
     %%--%%--%% Wykresy wyników (SubtractiveClustering FIS)
@@ -155,8 +156,8 @@ for loop = 1:it
     end
     temp = y_temp - getGlobal_y_u;
     q = find(temp == 0);
-    fprintf('Liczba dobrze zkwalifikowanych przypadków (PSO FIS) - set uczący: %d\n', size(q, 1));
-    PSO_u(loop) = size(q, 1);
+    fprintf('Procent dobrze zkwalifikowanych przypadków (PSO FIS) - set uczący: %.3f%%\n', round(size(q, 1) / size(y_out, 1), 5) * 100);
+    PSO_u(loop) = round(size(q, 1) / size(y_out, 1), 5) * 100;
 
 
     %%--%%--%% WYpisywanie liczby dobrze zkwalifikowanych przypadków
@@ -167,8 +168,8 @@ for loop = 1:it
     end
     temp = y_temp - getGlobal_y_t;
     q = find(temp == 0);
-    fprintf('Liczba dobrze zkwalifikowanych przypadków (PSO FIS) - set testujący: %d\n', size(q, 1));
-    PSO_t(loop) = size(q, 1);
+    fprintf('Procent dobrze zkwalifikowanych przypadków (PSO FIS) - set testujący: %.3f%%\n', round(size(q, 1) / size(y_test, 1), 5) * 100);
+    PSO_t(loop) = round(size(q, 1) / size(y_test, 1), 5) * 100;
 
 
     %%--%%--%% Wykresy wyników (PSO FIS)
@@ -190,14 +191,7 @@ for loop = 1:it
 end
 
 
-Description(end+1) = "Suma";
-SC_u(end+1) = sum(SC_u(1:it));
-SC_t(end+1) = sum(SC_t(1:it));
-PSO_u(end+1) = sum(PSO_u(1:it));
-PSO_t(end+1) = sum(PSO_t(1:it));
-
-
-Description(end+1) = "Średnie";
+Description(end+1) = "Średnie (%)";
 SC_u(end+1) = mean(SC_u(1:it));
 SC_t(end+1) = mean(SC_t(1:it));
 PSO_u(end+1) = mean(PSO_u(1:it));
